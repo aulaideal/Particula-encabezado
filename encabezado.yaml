@@ -1,0 +1,105 @@
+name: Page Title
+description: Display a Page Title.
+type: particle
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Habilitado
+      description: Globally enable Call-to-action particles.
+      default: true
+
+    alineacion:
+      type: select.select
+      label: Alineación
+      description: Alineación del contenido.
+      placeholder: 'Seleccionar'
+      default: alineacioncentrado
+      options:
+        alineacionizquierda: Izquierda
+        alineacioncentrado: Centrado
+        alineacionderecha: derecha
+
+
+    title:
+      type: input.text
+      label: Título
+      description: Escribe el título.
+      placeholder: Escribe el título.
+      default: Título de tu partícula. 
+
+    etiquetatitulo:
+      type: select.select
+      label: Etiqueta del título
+      description: Etiqueta de encabezado del título.
+      placeholder: 'Seleccionar'
+      default: h2  
+      options:
+        h1: H1
+        h2: H2
+        h3: H3
+        h4: H4
+        h5: H5
+        h6: H6
+
+    icon:
+      type: input.icon
+      label: Ícono del Título
+      description: Selecione un ícono que acompañará al título.
+
+    alineacionicono:
+      type: select.select
+      label: Alineación del Ícono
+      description: Alineación del Ícono.
+      placeholder: 'Seleccionar'      
+      options:
+        alineacionizquierda: Izquierda
+        alineacionarriba: Arriba
+
+    subrayado:
+      type: input.checkbox
+      label: ¿Subrayado?
+      description: Un subrayado para el el título.
+      default: false
+
+    subtitle:
+      type: input.text
+      label: Sub Título
+      description: Escribe el Subtítulo.
+      placeholder: Escribe el Subtítulo.
+
+    etiquetasubtitulo:
+      type: select.select
+      label: Etiqueta del Subtítulo
+      description: Etiqueta de encabezado del Subtítulo.
+      placeholder: 'Seleccionar'
+      default: h5  
+      options:
+        h1: H1
+        h2: H2
+        h3: H3
+        h4: H4
+        h5: H5
+        h6: H6
+
+    description:
+      type: textarea.textarea
+      label: Descripción
+      description: Ingrese una descripción.
+      placeholder: Ingrese una descripción.
+
+
+    css.class:
+      type: input.selectize
+      label: Clase CSS
+      description: Defina una clase CSS para la partícula.
+      default: 
+
+    extra:
+      type: collection.keyvalue
+      label: Tag Attributes
+      description: Extra Tag attributes.
+      key_placeholder: Key (data-*, style, ...)
+      value_placeholder: Value
+      exclude: ['id', 'class']

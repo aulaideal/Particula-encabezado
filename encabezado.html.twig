@@ -1,0 +1,24 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+{% set attr_extra = '' %}
+{% if particle.extra %}
+    {% for attributes in particle.extra %}
+        {% for key, value in attributes %}
+            {% set attr_extra = attr_extra ~ ' ' ~ key|e ~ '="' ~ value|e('html_attr') ~ '"' %}
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+{% block particle %}
+    <header class="g-encabezado{% if particle.css.class %} {{ particle.css.class|e }}{% endif %} {{ particle.alineacion }}" {% if particle.extra %}{{ attr_extra|raw }}{% endif %}>
+    
+         {% if particle.title or particle.icon %}<{{ particle.etiquetatitulo }} >{% if particle.icon %}<i class="{{ particle.icon|e }} {{ particle.alineacionicono|e }}"></i>{% endif %}{% if particle.title %}{{ particle.title|raw }}{% endif %}
+        {% if particle.subrayado %}<hr>{% endif %}
+        </{{ particle.etiquetatitulo }}>
+    {% endif %}
+    {% if particle.subtitle %}
+        <{{ particle.etiquetasubtitulo }} class="g-encabezado-subtitulo"> {{ particle.subtitle|raw  }} </{{ particle.etiquetasubtitulo }}>
+    {% endif %}
+    
+    {% if particle.description %}<p>{{ particle.description|raw }}</p>{% endif %}
+
+</header>
+{% endblock %}
