@@ -1,5 +1,5 @@
 # Partícula "Encabezado"
-Partícula para Gantry 5 que te permite incluir un encabezado animado tipo "Sticky Header" dentro de tu diseño. Proporciona múltiples opciones de configuracion. 
+Partícula para Gantry 5 que te permite incluir Títulos y Subtítulos  dentro de tu diseño. Proporciona múltiples opciones de configuracion. 
 
 Instalación
 -----------
