@@ -1,5 +1,6 @@
+
 name: Encabezado
-description: Display a Page Title.
+description: Muestra Títulos y Subtítulos dentro del tu diseño.
 type: particle
 
 form:
@@ -28,6 +29,11 @@ form:
       description: Escribe el título.
       placeholder: Escribe el título.
       default: Título de tu partícula. 
+
+    colortitulo:
+      type: input.colorpicker
+      label: Color del título
+      
 
     etiquetatitulo:
       type: select.select

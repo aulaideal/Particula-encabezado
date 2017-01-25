@@ -10,12 +10,12 @@
 {% block particle %}
     <header class="g-encabezado{% if particle.css.class %} {{ particle.css.class|e }}{% endif %} {{ particle.alineacion }}" {% if particle.extra %}{{ attr_extra|raw }}{% endif %}>
     
-         {% if particle.title or particle.icon %}<{{ particle.etiquetatitulo }} >{% if particle.icon %}<i class="{{ particle.icon|e }} {{ particle.alineacionicono|e }}"></i>{% endif %}{% if particle.title %}{{ particle.title|raw }}{% endif %}
+         {% if particle.title or particle.icon %}<{{ particle.etiquetatitulo }} class="g-encabezado-titulo" {% if particle.colortitulo %}>  style="color:{{ particle.colortitulo }}"{% endif %} >{% if particle.icon %}<i class="{{ particle.icon|e }} {{ particle.alineacionicono|e }}"></i>{% endif %}{% if particle.title %}{{ particle.title|raw }}{% endif %}
         {% if particle.subrayado %}<hr>{% endif %}
         </{{ particle.etiquetatitulo }}>
     {% endif %}
     {% if particle.subtitle %}
-        <{{ particle.etiquetasubtitulo }} class="g-encabezado-subtitulo"> {{ particle.subtitle|raw  }} </{{ particle.etiquetasubtitulo }}>
+        <{{ particle.etiquetasubtitulo }} class="g-encabezado-subtitulo" > {{ particle.subtitle|raw  }} </{{ particle.etiquetasubtitulo }}>
     {% endif %}
     
     {% if particle.description %}<p>{{ particle.description|raw }}</p>{% endif %}
