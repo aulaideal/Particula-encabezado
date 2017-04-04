@@ -8,17 +8,22 @@
     {% endfor %}
 {% endif %}
 {% block particle %}
-    <header class="g-encabezado{% if particle.css.class %} {{ particle.css.class|e }}{% endif %} {{ particle.alineacion }}" {% if particle.extra %}{{ attr_extra|raw }}{% endif %}>
+<header class="g-encabezado{% if particle.css.class %} {{ particle.css.class|e }}{% endif %} {{ particle.alineacion }}{% if particle.disenoornamental %} g-diseno-ornamental{% endif %}"{% if particle.extra %}{{ attr_extra|raw }}{% endif %}>    
+    <{{ particle.etiquetatitulo }} class="g-encabezado-titulo"{% if particle.colortitulo %} style="color:{{ particle.colortitulo }}"{% endif %}>    
+            {%- if particle.alineacionicono=='alineacionicoizquierda' or particle.alineacionicono=='alineacionicoarriba'  -%}
+                <i class="{{ particle.icon|e }} {{ particle.alineacionicono|e }}"></i>{{ particle.title|raw }}
+            {%- else -%}
+               {{ particle.title|raw }}
+                 <i class="{{ particle.icon|e }} {{ particle.alineacionicono|e }}"></i>
+            {% endif %}    
+       
+    </{{ particle.etiquetatitulo }}>  
+    {%- if particle.subrayado -%}<hr {% if particle.colortitulo %} style="background-color:{{ particle.colortitulo }}"{% endif %}>{%- endif -%}  
+    {%- if particle.subtitle -%}
+        <{{ particle.etiquetasubtitulo }} class="g-encabezado-subtitulo"{% if particle.colorsubtitulo %} style="color:{{ particle.colorsubtitulo }}"{% endif %}>{{ particle.subtitle|raw  }}</{{ particle.etiquetasubtitulo }}>
+    {%- endif -%}
     
-         {% if particle.title or particle.icon %}<{{ particle.etiquetatitulo }} class="g-encabezado-titulo" {% if particle.colortitulo %}>  style="color:{{ particle.colortitulo }}"{% endif %} >{% if particle.icon %}<i class="{{ particle.icon|e }} {{ particle.alineacionicono|e }}"></i>{% endif %}{% if particle.title %}{{ particle.title|raw }}{% endif %}
-        {% if particle.subrayado %}<hr>{% endif %}
-        </{{ particle.etiquetatitulo }}>
-    {% endif %}
-    {% if particle.subtitle %}
-        <{{ particle.etiquetasubtitulo }} class="g-encabezado-subtitulo" > {{ particle.subtitle|raw  }} </{{ particle.etiquetasubtitulo }}>
-    {% endif %}
-    
-    {% if particle.description %}<p>{{ particle.description|raw }}</p>{% endif %}
+    {%- if particle.description -%}<p>{{ particle.description|raw }}</p>{%- endif -%}
 
 </header>
 {% endblock %}

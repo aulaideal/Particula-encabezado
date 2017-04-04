@@ -11,16 +11,22 @@ form:
       description: Globally enable Call-to-action particles.
       default: true
 
+
+    separador01:
+      type: separator.note
+      class: alert alert-info
+      content: '<h4>Ajustes del Título</h4>'
+
     alineacion:
       type: select.select
       label: Alineación
       description: Alineación del contenido.
       placeholder: 'Seleccionar'
-      default: alineacioncentrado
+      default: center
       options:
-        alineacionizquierda: Izquierda
-        alineacioncentrado: Centrado
-        alineacionderecha: derecha
+       align-left: Izquierda
+       center: Centrado
+       align-right: derecha
 
 
     title:
@@ -60,8 +66,10 @@ form:
       description: Alineación del Ícono.
       placeholder: 'Seleccionar'      
       options:
-        alineacionizquierda: Izquierda
-        alineacionarriba: Arriba
+        alineacionicoizquierda: Izquierda
+        alineacionicoarriba: Arriba
+        alineacionicoderecha: Derecha
+
 
     subrayado:
       type: input.checkbox
@@ -69,11 +77,27 @@ form:
       description: Un subrayado para el el título.
       default: false
 
+    disenoornamental:
+      type: input.checkbox
+      label: ¿Diseño ornamental?
+      description: Lineas ornamentales de insertarán en los laterales del título.
+      default: false
+
+
+    separador02:
+      type: separator.note
+      class: alert alert-info
+      content: '<h4>Ajustes del SubTítulo</h4>'
+
     subtitle:
       type: input.text
       label: Sub Título
       description: Escribe el Subtítulo.
       placeholder: Escribe el Subtítulo.
+
+    colorsubtitulo:
+      type: input.colorpicker
+      label: Color del Subtítulo
 
     etiquetasubtitulo:
       type: select.select
@@ -88,6 +112,11 @@ form:
         h4: H4
         h5: H5
         h6: H6
+
+    separador03:
+      type: separator.note
+      class: alert alert-info
+      content: '<h4>Ajustes adicionales</h4>'
 
     description:
       type: textarea.textarea
