@@ -9,6 +9,7 @@ El modo de instalación es muy sencillo:
 + Crear la carpeta "particles" dentro de tu carpeta "custom" en tu plantilla Gantry. Ejem: g5_hydrogen/custom/particles
 + Cópie los archivos encabezado.html.twig y encabezado.yaml dentro de la carpeta "particle". Ejem: g5_hydrogen/custom/particles
 + Cópie el archivo scss/_encabezado.scss dentro de tu carpeta "scss". Ejem: g5_hydrogen/custom/scss/_encabezado.scss
++ Cópie la carpeta images dentro de tu carpeta "custom". Ejem: g5_hydrogen/custom/images
 + Llame al archivo desde tu custom.scss colocando la siguiente linea al comienzo: 
   
 /* Estilos partícula Encabezado */
@@ -17,7 +18,7 @@ El modo de instalación es muy sencillo:
 
 Modo de uso
 -----------
-+ Desde el Layout Manager encontrarás la partícula con el nombre "Boton cta". 
++ Desde el Layout Manager encontrarás la partícula con el nombre "Encabezado". 
 + Arrástrala a tu  diseño y configúrala.
 
 Saludos
