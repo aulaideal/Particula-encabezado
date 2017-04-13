@@ -3,6 +3,10 @@ name: Encabezado
 description: Muestra Títulos y Subtítulos dentro del tu diseño.
 type: particle
 
+configuration:
+  caching:
+    type: static
+
 form:
   fields:
     enabled:
