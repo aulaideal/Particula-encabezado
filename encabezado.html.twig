@@ -23,7 +23,7 @@
         <{{ particle.etiquetasubtitulo }} class="g-encabezado-subtitulo"{% if particle.colorsubtitulo %} style="color:{{ particle.colorsubtitulo }}"{% endif %}>{{ particle.subtitle|raw  }}</{{ particle.etiquetasubtitulo }}>
     {%- endif -%}
     
-    {%- if particle.description -%}<p>{{ particle.description|raw }}</p>{%- endif -%}
+    {%- if particle.description -%}<div class="descripcion-encabezado">{{ particle.description|raw }}</div>{%- endif -%}
 
 </header>
 {% endblock %}

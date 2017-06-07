@@ -58,14 +58,15 @@ overflow: hidden;
 	background-position: left center;
 	}
 
-}
 /*-------------------------------------------
-MEDIAS QUERIES
-------------------------------------------*/
-@media all and (max-width:$breakpoints-tablet-container) {
-.g-encabezado {
-hr{
-margin: 1rem 0;
-}
-}
+	MEDIAS QUERIES
+	------------------------------------------*/
+	@include breakpoint(mobile-only) {
+		.g-encabezado {
+			hr{
+			margin: 1rem 0;
+			}
+		}
+	}	
+	
 }
