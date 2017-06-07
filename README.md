@@ -1,5 +1,7 @@
 # Partícula "Encabezado"
 Partícula para Gantry 5 que te permite incluir Títulos y Subtítulos  dentro de tu diseño. Proporciona múltiples opciones de configuracion. 
+![particula-encabezado](https://user-images.githubusercontent.com/9434043/26898993-5c43825c-4b93-11e7-86ea-ac0111f14b0e.png)
+
 
 Instalación
 -----------
